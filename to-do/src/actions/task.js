@@ -6,3 +6,10 @@ export const addTask = task => {
         task   
     }
 }
+
+export const removeTask = index => {
+    return {
+        type: TodoActionTypes.REMOVE_TASK,
+        index   
+    }
+}

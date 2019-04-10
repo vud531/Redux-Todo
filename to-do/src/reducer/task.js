@@ -13,6 +13,12 @@ const Task = ( state=initialState, action ) => {
             ...state,
             action.task
         ];
+        case TodoActionTypes.REMOVE_TASK:
+        // console.log(action.index)
+        return [
+            ...state.slice(0, action.index),
+            ...state.slice(action.index + 1)
+        ];
 
         default: 
         return state;

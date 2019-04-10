@@ -14,9 +14,12 @@ class ToDoApp extends Component {
         // console.log(this.props);
         console.log(tasks);
         const addTask = bindActionCreators(ToDoActionTypes.addTask, dispatch);
+        const removeTask = bindActionCreators(ToDoActionTypes.removeTask, dispatch);
         const taskComponents = tasks.map((task, index) => (
-            <Task 
+            <Task
+            index={index}
             task={task}
+            removeTask={removeTask}
             key={task + index}
             />
         ));

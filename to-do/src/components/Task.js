@@ -1,4 +1,5 @@
 import React from 'react';
+import { removeTask } from '../actions/task';
 
 
 const Task = props => {
@@ -11,7 +12,7 @@ const Task = props => {
         // </form>
         <div>
             <span>{props.task}</span>
-            <button>Delete</button>
+            <button onClick={() => props.removeTask(props.index)}>Delete</button>
         </div>
     )
 }
