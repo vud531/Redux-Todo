@@ -6,7 +6,7 @@ class ToDoApp extends Component {
     render = () => {
         return (
             <div className="todo-app">
-                <Form />
+                <Form addTask={} />
             </div>
         )
     }
