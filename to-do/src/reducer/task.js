@@ -1,4 +1,4 @@
-import TodoActionTypes from '../actiontypes/TodoActionTypes';
+import * as TodoActionTypes from '../actiontypes/TodoActionTypes';
 
 const initialState = [
     { task: "learn redux" },

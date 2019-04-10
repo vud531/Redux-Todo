@@ -1,4 +1,4 @@
-import TodoActionTypes from '../actiontypes/TodoActionTypes';
+import * as TodoActionTypes from '../actiontypes/TodoActionTypes';
 
 export const addTask = task => {
     return {
