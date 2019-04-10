@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from '../component/Form'
+import Form from '../components/Form'
 
 class ToDoApp extends Component {
 
