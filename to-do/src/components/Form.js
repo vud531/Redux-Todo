@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 
 export default class Form extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        console.log(this.props);
         this.state = {
             task: ''
         }
@@ -14,9 +15,18 @@ export default class Form extends Component {
         this.setState({task:task})
     }
 
+    onTaskSubmit = event => {
+        if (event){
+            event.preventDefault();
+        }
+
+        this.props.addTask(this.state.task);
+        this.setState({task: ''});
+    }
+
     render = () => {
         return (
-            <form >
+            <form onSubmit={this.onTaskSubmit}>
                 <input 
                 name="task" 
                 value={this.state.task}

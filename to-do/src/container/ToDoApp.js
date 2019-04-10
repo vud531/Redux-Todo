@@ -25,4 +25,9 @@ class ToDoApp extends Component {
     }
 }
 
-export default ToDoApp;
+const mapStateToProps = state => {
+    return {
+        tasks: state
+    }
+}
+export default connect(mapStateToProps)(ToDoApp);
