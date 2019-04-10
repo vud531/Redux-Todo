@@ -1,9 +1,9 @@
 import * as TodoActionTypes from '../actiontypes/TodoActionTypes';
 
 const initialState = [
-    { task: "learn redux" },
-    { task: "review react lessons" },
-    { task: "practice different concepts from react lessons" }
+    "learn redux",
+    "review react lessons",
+    "practice different concepts from react lessons"
 ]
 
 const Task = ( state=initialState, action ) => {
@@ -11,7 +11,7 @@ const Task = ( state=initialState, action ) => {
         case TodoActionTypes.ADD_TASK:
         return [
             ...state,
-            { task: action.task }
+            action.task
         ];
 
         default: 
